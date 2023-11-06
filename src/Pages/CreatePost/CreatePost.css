@@ -1,0 +1,6 @@
+.Quill{
+    transform: translateZ(10px);
+    box-shadow: -10px 10px 10px rgb(204, 107, 107);
+    margin-top:16px;
+    margin-bottom: 16px;
+}

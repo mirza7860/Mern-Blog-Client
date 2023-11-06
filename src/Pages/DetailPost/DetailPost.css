@@ -1,0 +1,48 @@
+div.post-page div.image {
+  max-height: 100%;
+  display: flex;
+  overflow: hidden;
+}
+div.post-page div.image img {
+  height: 512px;
+  object-fit: contain;
+  object-position: center center;
+}
+div.post-page a {
+  color: #44444444;
+  text-decoration: underline;
+}
+div.post-page h1 {
+  text-align: center;
+  margin: 10px 0 5px;
+}
+div.post-page time {
+  text-align: center;
+  display: block;
+  font-size: 16px;
+  font-weight: 800;
+  color: #4d4d4d;
+}
+div.post-page div.author{
+    text-align: center;
+    margin-bottom: 32px;
+    font-size: 16px;
+    font-weight: bold;
+}
+div.edit-row{
+  text-align: center;
+  margin-bottom: 28px;
+}
+div.post-page a.edit-btn{
+  background-color: #4444;
+  display: inline-block;
+  align-items: center;
+  gap: 8px;
+  color: #ffff;
+  padding: 16px 32px;
+  text-decoration: none;
+  border-radius: 8px;
+}
+a svg{
+  height: 28px;
+}

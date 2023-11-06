@@ -1,0 +1,5 @@
+div.texts a {
+  text-decoration: none;
+  color: rgb(64, 64, 64);
+  text-transform: capitalize;
+}
