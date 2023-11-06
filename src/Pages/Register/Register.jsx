@@ -5,11 +5,14 @@ const Register = () => {
   const [Password, setPassword] = useState("");
   const register = async (e) => {
     e.preventDefault();
-    const response = await fetch("https://troubled-tights-seal.cyclic.app/register", {
-      method: "POST",
-      body: JSON.stringify({ Username, Password }),
-      headers: { "Content-Type": "application/json" },
-    });
+    const response = await fetch(
+      "https://blog-app-9ql4x.ondigitalocean.app/register",
+      {
+        method: "POST",
+        body: JSON.stringify({ Username, Password }),
+        headers: { "Content-Type": "application/json" },
+      }
+    );
     if(response){
       alert("registration successfull")
     }

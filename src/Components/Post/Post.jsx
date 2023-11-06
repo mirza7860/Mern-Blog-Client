@@ -15,7 +15,10 @@ export default function Post({
       <div className="post">
         <div className="image">
           <Link to={`/post/${_id}`}>
-            <img src={"https://troubled-tights-seal.cyclic.app/" + cover} alt="" />
+            <img
+              src={"https://blog-app-9ql4x.ondigitalocean.app/" + cover}
+              alt=""
+            />
           </Link>
         </div>
         <div className="texts">

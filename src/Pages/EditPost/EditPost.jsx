@@ -46,13 +46,15 @@ const EditPost = () => {
     "image",
   ];
   useEffect(() => {
-    fetch("https://troubled-tights-seal.cyclic.app/post/" + id).then((response) => {
-      response.json().then((postInfo) => {
-        settitle(postInfo.title);
-        setcontent(postInfo.content);
-        setsummary(postInfo.summary);
-      });
-    });
+    fetch("https://blog-app-9ql4x.ondigitalocean.app/post/" + id).then(
+      (response) => {
+        response.json().then((postInfo) => {
+          settitle(postInfo.title);
+          setcontent(postInfo.content);
+          setsummary(postInfo.summary);
+        });
+      }
+    );
   }, []);
   async function updatePost(e) {
     e.preventDefault();
@@ -64,11 +66,14 @@ const EditPost = () => {
     if (file) {
       data.set("file", file);
     }
-    const response = await fetch("https://troubled-tights-seal.cyclic.app/post", {
-      method: "PUT",
-      body: data,
-      credentials: "include",
-    });
+    const response = await fetch(
+      "https://blog-app-9ql4x.ondigitalocean.app/post",
+      {
+        method: "PUT",
+        body: data,
+        credentials: "include",
+      }
+    );
     if (response.ok) {
       setredirect(true);
     }

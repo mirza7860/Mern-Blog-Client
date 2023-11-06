@@ -3,7 +3,7 @@ import Post from "../../Components/Post/Post";
 const Posts = () => {
   const [posts, setposts] = useState([]);
   useEffect(() => {
-    fetch("https://troubled-tights-seal.cyclic.app/post").then((response) => {
+    fetch("https://blog-app-9ql4x.ondigitalocean.app/post").then((response) => {
       response.json().then((posts) => {
         setposts(posts);
       });

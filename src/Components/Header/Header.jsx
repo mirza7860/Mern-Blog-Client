@@ -7,7 +7,7 @@ const Header = () => {
   const { userinfo, setUserInfo } = useContext(UserContext);
 
   useEffect(() => {
-    fetch("https://troubled-tights-seal.cyclic.app/profile", {
+    fetch("https://blog-app-9ql4x.ondigitalocean.app/profile", {
       credentials: "include",
     }).then((response) => {
       response.json().then((userInfo) => {
@@ -17,7 +17,7 @@ const Header = () => {
   }, []);
 
   const logout = () => {
-    fetch("https://troubled-tights-seal.cyclic.app/logout", {
+    fetch("https://blog-app-9ql4x.ondigitalocean.app/logout", {
       credentials: "include",
       method: "POST",
     });

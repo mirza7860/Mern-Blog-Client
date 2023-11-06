@@ -9,11 +9,13 @@ export default function DetailPost() {
   const { userinfo } = useContext(UserContext);
   const { id } = useParams();
   useEffect(() => {
-    fetch(`https://troubled-tights-seal.cyclic.app/post/${id}`).then((response) => {
-      response.json().then((postInfo) => {
-        setPostInfo(postInfo);
-      });
-    });
+    fetch(`https://blog-app-9ql4x.ondigitalocean.app/post/${id}`).then(
+      (response) => {
+        response.json().then((postInfo) => {
+          setPostInfo(postInfo);
+        });
+      }
+    );
   }, []);
 
   if (!postInfo) return "";
@@ -46,7 +48,7 @@ export default function DetailPost() {
       )}
       <div className="image">
         <img
-          src={`https://troubled-tights-seal.cyclic.app/${postInfo.cover}`}
+          src={`https://blog-app-9ql4x.ondigitalocean.app/${postInfo.cover}`}
           alt=""
         />
       </div>

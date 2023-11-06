@@ -53,11 +53,14 @@ const CreatePost = () => {
     data.set("content", content);
     data.set("file", file);
     console.log(data);
-    const response = await fetch("https://troubled-tights-seal.cyclic.app/post", {
-      method: "POST",
-      body: data,
-      credentials:'include',
-    });
+    const response = await fetch(
+      "https://blog-app-9ql4x.ondigitalocean.app/post",
+      {
+        method: "POST",
+        body: data,
+        credentials: "include",
+      }
+    );
     if(response.ok){
       setredirect(true);
     }

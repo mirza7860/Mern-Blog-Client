@@ -9,12 +9,15 @@ const Login = () => {
   const { setUserInfo } = useContext(UserContext);
   const login = async (e) => {
     e.preventDefault();
-    const response = await fetch("https://troubled-tights-seal.cyclic.app/login", {
-      method: "POST",
-      body: JSON.stringify({ Username, Password }),
-      headers: { "Content-Type": "application/json" },
-      credentials: "include",
-    });
+    const response = await fetch(
+      "https://blog-app-9ql4x.ondigitalocean.app/login",
+      {
+        method: "POST",
+        body: JSON.stringify({ Username, Password }),
+        headers: { "Content-Type": "application/json" },
+        credentials: "include",
+      }
+    );
     if (response.ok) {
       response.json().then(userInfo=>{
         setUserInfo(userInfo);
