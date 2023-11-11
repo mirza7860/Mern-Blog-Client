@@ -1,48 +1,93 @@
+/* Default styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+div.post-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
 div.post-page div.image {
-  max-height: 100%;
-  display: flex;
   overflow: hidden;
+  border-radius: 8px;
 }
+
 div.post-page div.image img {
-  height: 512px;
+  width: 100%;
+  height: auto;
   object-fit: contain;
-  object-position: center center;
+  border-radius: 8px;
 }
+
 div.post-page a {
-  color: #44444444;
-  text-decoration: underline;
+  color: #3498db;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
+
+div.post-page a:hover {
+  color: #2980b9;
+}
+
 div.post-page h1 {
   text-align: center;
-  margin: 10px 0 5px;
+  margin: 20px 0 10px;
+  font-size: 24px;
+  line-height: 1.3;
 }
+
 div.post-page time {
   text-align: center;
   display: block;
-  font-size: 16px;
-  font-weight: 800;
-  color: #4d4d4d;
+  font-size: 14px;
+  color: #777;
 }
-div.post-page div.author{
-    text-align: center;
-    margin-bottom: 32px;
-    font-size: 16px;
-    font-weight: bold;
-}
-div.edit-row{
+
+div.post-page div.author {
   text-align: center;
-  margin-bottom: 28px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: bold;
 }
-div.post-page a.edit-btn{
-  background-color: #4444;
+
+div.edit-row {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+div.post-page a.edit-btn {
+  background-color: #3498db;
   display: inline-block;
-  align-items: center;
-  gap: 8px;
-  color: #ffff;
-  padding: 16px 32px;
+  padding: 12px 24px;
+  color: #fff;
   text-decoration: none;
-  border-radius: 8px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
-a svg{
-  height: 28px;
+
+div.post-page a.edit-btn svg {
+  height: 20px;
+  fill: #fff;
+  vertical-align: middle;
+}
+
+div.post-page a.edit-btn:hover {
+  background-color: #2980b9;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+  div.post-page div.image {
+    max-height: 300px;
+  }
+
+  div.post-page h1 {
+    font-size: 20px;
+  }
 }
