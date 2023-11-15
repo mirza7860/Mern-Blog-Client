@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { useNavigate } from "react-router-dom";
 import "./Register.css";
 
 const Register = () => {
   const [Username, setUsername] = useState("");
   const [Password, setPassword] = useState("");
-  const navigate = useNavigate(); // Initialize useNavigate
+  const navigate = useNavigate();
 
   const register = async (e) => {
     e.preventDefault();
@@ -20,7 +20,7 @@ const Register = () => {
 
     if (response.ok) {
       alert("Registration successful");
-      navigate('/'); // Use navigate function to redirect to '/'
+      navigate('/login');
     }
   };
 
