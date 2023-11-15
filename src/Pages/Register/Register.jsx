@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Navigate } from "react-router-dom";
 import "./Register.css";
 const Register = () => {
   const [Username, setUsername] = useState("");
@@ -13,8 +14,9 @@ const Register = () => {
         headers: { "Content-Type": "application/json" },
       }
     );
-    if(response){
-      alert("registration successfull")
+    if(response.ok){
+      alert("registration successfull");
+      return <Navigate to='/' />;
     }
   };
   return (
