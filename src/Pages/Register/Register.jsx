@@ -1,9 +1,12 @@
 import React, { useState } from "react";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 import "./Register.css";
+
 const Register = () => {
   const [Username, setUsername] = useState("");
   const [Password, setPassword] = useState("");
+  const navigate = useNavigate(); // Initialize useNavigate
+
   const register = async (e) => {
     e.preventDefault();
     const response = await fetch(
@@ -14,11 +17,13 @@ const Register = () => {
         headers: { "Content-Type": "application/json" },
       }
     );
-    if(response.ok){
-      alert("registration successfull");
-      return <Navigate to='/' />;
+
+    if (response.ok) {
+      alert("Registration successful");
+      navigate('/'); // Use navigate function to redirect to '/'
     }
   };
+
   return (
     <form className="register" action="">
       <h1>Register</h1>
@@ -31,7 +36,7 @@ const Register = () => {
       />
       <input
         type="password"
-        placeholder="pasword"
+        placeholder="password"
         autoComplete="current-password"
         value={Password}
         onChange={(e) => setPassword(e.target.value)}
@@ -42,3 +47,4 @@ const Register = () => {
 };
 
 export default Register;
+
