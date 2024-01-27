@@ -10,7 +10,7 @@ const Login = () => {
   const login = async (e) => {
     e.preventDefault();
     const response = await fetch(
-      "https://blog-app-9ql4x.ondigitalocean.app/login",
+      "https://nice-tan-chimpanzee-sock.cyclic.app/login",
       {
         method: "POST",
         body: JSON.stringify({ Username, Password }),
