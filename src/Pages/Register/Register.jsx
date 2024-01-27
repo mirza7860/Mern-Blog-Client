@@ -10,7 +10,7 @@ const Register = () => {
   const register = async (e) => {
     e.preventDefault();
     const response = await fetch(
-      "https://blog-app-9ql4x.ondigitalocean.app/register",
+      "https://nice-tan-chimpanzee-sock.cyclic.app/register",
       {
         method: "POST",
         body: JSON.stringify({ Username, Password }),
