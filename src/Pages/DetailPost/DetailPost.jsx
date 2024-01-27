@@ -9,7 +9,7 @@ export default function DetailPost() {
   const { userinfo } = useContext(UserContext);
   const { id } = useParams();
   useEffect(() => {
-    fetch(`https://blog-app-9ql4x.ondigitalocean.app/post/${id}`).then(
+    fetch(`https://nice-tan-chimpanzee-sock.cyclic.app/post/${id}`).then(
       (response) => {
         response.json().then((postInfo) => {
           setPostInfo(postInfo);
