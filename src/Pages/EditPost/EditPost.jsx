@@ -67,7 +67,7 @@ const EditPost = () => {
       data.set("file", file);
     }
     const response = await fetch(
-      "https://blog-app-9ql4x.ondigitalocean.app/post",
+      "https://nice-tan-chimpanzee-sock.cyclic.app/post",
       {
         method: "PUT",
         body: data,
