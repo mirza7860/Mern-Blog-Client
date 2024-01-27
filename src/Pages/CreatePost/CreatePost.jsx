@@ -54,7 +54,7 @@ const CreatePost = () => {
     data.set("file", file);
     console.log(data);
     const response = await fetch(
-      "https://blog-app-9ql4x.ondigitalocean.app/post",
+      "https://nice-tan-chimpanzee-sock.cyclic.app/post",
       {
         method: "POST",
         body: data,
