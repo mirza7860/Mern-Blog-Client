@@ -67,7 +67,7 @@ const EditPost = () => {
       data.set("file", file);
     }
     const response = await fetch(
-      "https://nice-tan-chimpanzee-sock.cyclic.app/post",
+      "http://3.110.156.197:8000/post",
       {
         method: "PUT",
         body: data,
