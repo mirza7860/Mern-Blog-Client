@@ -16,7 +16,7 @@ export default function Post({
         <div className="image">
           <Link to={`/post/${_id}`}>
             <img
-              src={"https://blog-app-9ql4x.ondigitalocean.app/" + cover}
+              src={"http://3.110.156.197:8000/" + cover}
               alt=""
             />
           </Link>
