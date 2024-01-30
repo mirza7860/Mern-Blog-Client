@@ -2,10 +2,11 @@ import React, { useEffect } from "react";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { UserContext } from "../../Context/Usercontext";
+import {useNavigate} from "react-router-dom";
 
 const Header = () => {
   const { userinfo, setUserInfo } = useContext(UserContext);
-
+  const navigate = useNavigate();
   useEffect(() => {
     fetch("http://3.110.156.197:8000/profile", {
       credentials: "include",
@@ -22,6 +23,7 @@ const Header = () => {
       method: "POST",
     });
     setUserInfo(null);
+    navigate("/")
   };
 
   const username = userinfo?.Username;
