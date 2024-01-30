@@ -46,7 +46,7 @@ const EditPost = () => {
     "image",
   ];
   useEffect(() => {
-    fetch("http://3.110.156.197:8000/post/" + id).then(
+    fetch("https://3.110.156.197:8000/post/" + id).then(
       (response) => {
         response.json().then((postInfo) => {
           settitle(postInfo.title);

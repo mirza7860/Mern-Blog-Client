@@ -54,7 +54,7 @@ const CreatePost = () => {
     data.set("file", file);
     console.log(data);
     const response = await fetch(
-      "http://3.110.156.197:8000/post",
+      "https://3.110.156.197:8000/post",
       {
         method: "POST",
         body: data,

@@ -8,7 +8,7 @@ const Header = () => {
   const { userinfo, setUserInfo } = useContext(UserContext);
   const navigate = useNavigate();
   useEffect(() => {
-    fetch("http://3.110.156.197:8000/profile", {
+    fetch("https://3.110.156.197:8000/profile", {
       credentials: "include",
     }).then((response) => {
       response.json().then((userInfo) => {
@@ -18,7 +18,7 @@ const Header = () => {
   }, []);
 
   const logout = () => {
-    fetch("http://3.110.156.197:8000/logout", {
+    fetch("https://3.110.156.197:8000/logout", {
       credentials: "include",
       method: "POST",
     });

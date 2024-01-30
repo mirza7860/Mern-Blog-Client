@@ -9,7 +9,7 @@ export default function DetailPost() {
   const { userinfo } = useContext(UserContext);
   const { id } = useParams();
   useEffect(() => {
-    fetch(`http://3.110.156.197:8000/post/${id}`).then(
+    fetch(`https://3.110.156.197:8000/post/${id}`).then(
       (response) => {
         response.json().then((postInfo) => {
           setPostInfo(postInfo);

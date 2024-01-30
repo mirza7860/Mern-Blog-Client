@@ -10,7 +10,7 @@ const Login = () => {
   const login = async (e) => {
     e.preventDefault();
     const response = await fetch(
-      "http://3.110.156.197:8000/login",
+      "https://3.110.156.197:8000/login",
       {
         method: "POST",
         body: JSON.stringify({ Username, Password }),
