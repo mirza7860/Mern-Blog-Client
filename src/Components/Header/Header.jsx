@@ -7,7 +7,7 @@ const Header = () => {
   const { userinfo, setUserInfo } = useContext(UserContext);
 
   useEffect(() => {
-    fetch("https://nice-tan-chimpanzee-sock.cyclic.app/profile", {
+    fetch("http://3.110.156.197:8000/profile", {
       credentials: "include",
     }).then((response) => {
       response.json().then((userInfo) => {
@@ -17,7 +17,7 @@ const Header = () => {
   }, []);
 
   const logout = () => {
-    fetch("https://nice-tan-chimpanzee-sock.cyclic.app/logout", {
+    fetch("http://3.110.156.197:8000/logout", {
       credentials: "include",
       method: "POST",
     });
