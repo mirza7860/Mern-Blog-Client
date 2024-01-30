@@ -10,7 +10,7 @@ const Register = () => {
   const register = async (e) => {
     e.preventDefault();
     const response = await fetch(
-      "http://3.110.156.197:8000/register",
+      "https://3.110.156.197:8000/register",
       {
         method: "POST",
         body: JSON.stringify({ Username, Password }),
