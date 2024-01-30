@@ -10,7 +10,7 @@ const Login = () => {
   const login = async (e) => {
     e.preventDefault();
     const response = await fetch(
-      "https://nice-tan-chimpanzee-sock.cyclic.app/login",
+      "http://3.110.156.197:8000/login",
       {
         method: "POST",
         body: JSON.stringify({ Username, Password }),
