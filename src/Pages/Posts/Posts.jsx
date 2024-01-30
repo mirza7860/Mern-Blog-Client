@@ -3,7 +3,7 @@ import Post from "../../Components/Post/Post";
 const Posts = () => {
   const [posts, setposts] = useState([]);
   useEffect(() => {
-    fetch("https://nice-tan-chimpanzee-sock.cyclic.app/post").then((response) => {
+    fetch("http://3.110.156.197:8000/post").then((response) => {
       response.json().then((posts) => {
         setposts(posts);
       });
